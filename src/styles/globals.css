@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-playfair;
+  }
+
+  strong,
+  b {
+    @apply font-extrabold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-[95%] max-w-[67.5rem] mx-auto;
+  }
+
+  .container-big {
+    @apply w-[95%] max-w-[75rem] mx-auto;
+  }
+
+  .rounded-bubble {
+    border-radius: 9999px 7000px 7000px 4000px;
+  }
+}
+
+@layer utilities {
+  .transition-opacity,
+  .transition-colors,
+  .transition-all {
+    @apply ease-out duration-300;
+  }
+
+  .transition-border {
+    @apply transition-[border-radius] ease-out duration-300;
+  }
+}
