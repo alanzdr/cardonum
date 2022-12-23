@@ -6,7 +6,6 @@ const nextConfig = {
   fileLoader: true,
   svgrOptions: {
     titleProp: true,
-    icon: true,
   },
 }
 

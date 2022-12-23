@@ -29,6 +29,10 @@
   .rounded-bubble {
     border-radius: 9999px 7000px 7000px 4000px;
   }
+
+  .rounded-form {
+    border-radius: 2.5rem 0.625rem 0.625rem 0.625rem;
+  }
 }
 
 @layer utilities {
@@ -40,5 +44,9 @@
 
   .transition-border {
     @apply transition-[border-radius] ease-out duration-300;
+  }
+
+  .ball {
+    @apply rounded-full bg-gradient-to-b from-primary-dark to-primary-light content-[''];
   }
 }

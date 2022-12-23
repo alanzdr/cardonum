@@ -23,6 +23,9 @@ module.exports = {
         'medium-dark': '#515557',
         dark: '#292C37',
       },
+      blue: {
+        dark: '#292C37'
+      },
       white: "#fff",
       black: "#000"
     },
