@@ -26,8 +26,8 @@ const VehicleType: React.FC<Props> = ({onSubmit}) => {
   return (
     <div className='flex flex-col w-full h-full'>
       <p className='text-sm'>
-        <strong>Select the type of vehicle </strong> 
-        you want to donate:
+        What <strong>type of vehicle</strong> you would 
+        like to donate:
       </p>
       <div className='mt-7 grid grid-rows-[auto] grid-cols-3 gap-[0.625rem]'>
         {vehicleTypes.map(type => (

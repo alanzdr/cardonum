@@ -13,17 +13,19 @@ const Hero: React.FC = () => {
     <section 
       id='section-hero' 
       ref={animationRef} 
-      className='relative bg-[#e1e0e7]'
+      className='relative bg-white lg:bg-[#e1e0e7]'
     >
-      <Background animation={topDownShowAnimation} />
-      <div className='relative z-20 container flex flex-row items-center justify-between'>
-        <div className='max-w-[20.375rem] flex flex-col items-center'>
-          <m.h1 {...topDownShowAnimation()} className='text-[4.25rem] leading-[1.05]'>
-            <strong className='bg-gradient-to-r from-primary-dark to-primary-light bg-clip-text text-transparent'>Donate</strong><br />
-            your car 
+      <div className='lg:absolute lg:top-0 lg:left-0 lg:w-full lg:h-full lg:overflow-hidden'>
+        <Background animation={topDownShowAnimation} />
+      </div>
+      <div className='relative z-20 container flex flex-col lg:flex-row items-center justify-between'>
+        <div className='max-w-[20.375rem] flex flex-col items-center text-center lg:text-left'>
+          <m.h1 {...topDownShowAnimation()} className='text-[2.625rem] lg:text-[4.25rem] leading-[1.05]'>
+            Donate <br className='hidden lg:block' />
+            your <br className='lg:hidden' />car 
             to charity
           </m.h1>
-          <m.p {...topDownShowAnimation(0.2)} className='text-sm leading-[1.8] text-blue-dark mt-9'>
+          <m.p {...topDownShowAnimation(0.2)} className='text-sm leading-[1.8] text-blue-dark mt-4 lg:mt-9'>
             <strong>Donating your car to charity </strong>
             is an investment in the future of your community 
             and a powerful way to make a positive difference 
@@ -32,7 +34,7 @@ const Hero: React.FC = () => {
         </div>
         <m.div 
           {...topDownShowAnimation(1.1)}
-          className='relative overflow-hidden z-20 top-10 mt-8 bg-white shadow-lg p-10 rounded-form'
+          className='relative overflow-hidden z-20 lg:top-24 mt-8 lg:-mt-6 bg-white shadow-lg p-10 rounded-form'
         >
           <Form />
         </m.div>
