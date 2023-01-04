@@ -15,7 +15,6 @@ const Form: React.FC = () => {
 
   const StepFormLayout = useCallback(
     () => {
-      console.log(step)
       switch (step) {
         case 0: return <VehicleType onSubmit={() => setStep(1)}/>
         case 1: return <VehicleInfos onSubmit={() => setStep(2)}/>
