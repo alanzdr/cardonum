@@ -23,7 +23,7 @@ const HowItWorks: React.FC = () => {
           {...topDownShowAnimation()} 
           className="text-center lg:text-left"
         >
-          <h2 className='text-[1.75rem] lg:text-[2.5rem]'>How it works</h2>
+          <h2 className='heading'>How it works</h2>
           <p className='mt-2'>Lorem ipsum dolor sit amet. In deleniti nisi rem.</p>
         </m.div>
         <div className='mt-12 grid grid-rows-4 grid-cols-1 lg:grid-rows-1 lg:grid-cols-4 gap-12 lg:gap-8'>

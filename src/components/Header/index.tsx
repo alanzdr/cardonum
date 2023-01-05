@@ -71,8 +71,8 @@ const Header: React.FC = () => {
               Call us: <strong>702-000-0000</strong>
             </p>
           </a>
-          <div className="mx-6 w-[1px] h-4 content-[''] bg-gray-medium" />
-          <div className='flex flex-row items-center pl-4 pr-6 pt-3 pb-[0.625rem] bg-gray-light rounded-bubble'>
+          <div className="hidden xl:flex mx-6 w-[1px] h-4 content-[''] bg-gray-medium" />
+          <div className='hidden xl:flex flex-row items-center pl-4 pr-6 pt-3 pb-[0.625rem] bg-gray-light rounded-bubble'>
             <Image 
               src={VerifyIcon}
               alt="Phone Icon"

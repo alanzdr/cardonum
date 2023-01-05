@@ -26,6 +26,18 @@
     @apply w-[90%] max-w-[75rem] mx-auto;
   }
 
+  .heading {
+    @apply font-extrabold leading-tight text-[1.75rem] lg:text-[2.5rem];
+  }
+
+  .heading-2 {
+    @apply font-extrabold leading-tight text-[1.75rem] lg:text-[2rem];
+  }
+
+  .heading-3 {
+    @apply font-extrabold text-lg leading-tight  lg:text-[1.3125rem];
+  }
+
   .rounded-bubble {
     border-radius: 9999px 7000px 7000px 4000px;
   }

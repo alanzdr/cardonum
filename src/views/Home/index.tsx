@@ -4,6 +4,7 @@ import Motion from 'contexts/MotionContent';
 
 import Hero from './Hero'
 import HowItWorks from './HowItWorks'
+import ProfoundDifference from './ProfoundDifference'
 import PageLoading from 'components/PageLoading';
 
 const Home: React.FC = () => {
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
     <Motion>
       <Hero />
       <HowItWorks />
+      <ProfoundDifference />
       <PageLoading />
     </Motion>
   )
