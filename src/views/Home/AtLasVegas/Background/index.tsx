@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image'
 
+import BackgroundImage from 'assets/home/at-las-vegas-background.png'
+import BackgroundMobileImage from 'assets/home/at-las-vegas-background-mobile.png'
 import KidImage from 'assets/home/at-las-vegas-image.png'
 import { m, MotionProps } from 'framer-motion';
 import LeftLinesImage from 'assets/home/left-lines.svg'
@@ -12,12 +14,22 @@ interface Props {
 const Background: React.FC<Props> = ({animation}) => {
   return (
     <div>
-      <m.div {...animation()} className="w-[21.31rem] h-[29.5rem] lg:w-[33.5rem] lg:h-[49.125rem] absolute right-0 lg:-right-8 -top-6 lg:top-0 z-0">
+      <Image 
+        src={BackgroundImage}
+        alt="background gradient"
+        className="hidden md:flex w-full h-full absolute left-0 top-0 object-cover"
+      />
+      <Image 
+        src={BackgroundMobileImage}
+        alt="background gradient"
+        className="md:hidden w-full h-full absolute left-0 top-0 object-cover"
+      />
+      <m.div {...animation()} className="w-[21.31rem] h-[29.5rem] lg:w-[31.625rem] lg:h-[46.375rem] absolute right-0 lg:-right-8 xl:right-0 -top-6 lg:top-0 z-0">
         <Image 
           src={KidImage}
           alt="child in a wheelchair"
-          width={536}
-          height={786}
+          width={506}
+          height={506}
           className="w-full h-full object-contain object-right"
         />
       </m.div>

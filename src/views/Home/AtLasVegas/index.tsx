@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import Button from 'components/Button';
 import React from 'react';
 
-import styles from './styles.module.css'
 import Background from './Background';
 import useScrollAnimation from 'hooks/useScrollAnimation';
 import { m } from 'framer-motion';
@@ -11,7 +10,7 @@ const AtLasVegas: React.FC = () => {
   const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
-    <section className={classNames("relative pt-[29.125rem] pb-16 sm:py-28 mt-14 w-full lg:overflow-hidden", styles.background)}>
+    <section className="relative pt-[29.125rem] pb-16 sm:py-32 mt-14 w-full lg:overflow-hidden">
       <Background animation={topDownShowAnimation} />
       <div ref={animationRef} className='container relative z-10'>
         <div className='max-w-[21rem] md:max-w-[32rem] lg:max-w-[44.5625rem]'>
