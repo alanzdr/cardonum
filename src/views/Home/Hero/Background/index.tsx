@@ -28,7 +28,7 @@ const Background: React.FC<Props> = ({animation}) => {
         loading='eager'
       />
       <div className='relative w-full h-[22.5rem] lg:static lg:flex overflow-hidden'>
-        <m.div {...animation(0.5)} className="absolute top-1/2 left-1/2 lg:left-[calc(50%+6rem)] w-[25rem] lg:w-[42.5rem]">
+        <m.div {...animation()} className="absolute top-1/2 left-1/2 lg:left-[calc(50%+6rem)] w-[25rem] lg:w-[42.5rem]">
           <Image 
             src={KidsImage}
             alt="Kids Images"

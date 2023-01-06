@@ -18,7 +18,7 @@ const FinancialAid: React.FC = () => {
         <div className='flex flex-col justify-center row-start-2 lg:row-start-1'>
           <m.div  
             className='flex flex-row items-center '
-            {...topDownShowAnimation()}  
+            {...topDownShowAnimation(0.2)}  
           >
             <div className='w-12 h-[4.75rem] flex-none bg-primary rounded-lg flex items-center justify-center'>
               <Image 
@@ -33,17 +33,17 @@ const FinancialAid: React.FC = () => {
             </h3>
           </m.div>
           <div className='mt-8 lg:max-w-[27.75rem]'>
-            <m.p {...topDownShowAnimation(0.2)} className="font-extrabold">
+            <m.p {...topDownShowAnimation(0.4)} className="font-extrabold">
               If you&apos;re looking for a way to give back to 
               disabled veterans, consider donating your car to 
               go to give financial aid.
             </m.p>
-            <m.p {...topDownShowAnimation(0.4)} className='mt-8'>
+            <m.p {...topDownShowAnimation(0.6)} className='mt-8'>
               With your generous donation, you can help provide 
               education and job training resources to disabled 
               veterans in need.
             </m.p>
-            <m.p {...topDownShowAnimation(0.6)} className='mt-8'>
+            <m.p {...topDownShowAnimation(0.8)} className='mt-8'>
               Not only will you be helping your fellow veterans, 
               but you‘ll also be eligible for a tax deduction 
               on your donated vehicle. 
@@ -51,7 +51,7 @@ const FinancialAid: React.FC = () => {
           </div>
         </div>
         <m.div 
-          {...topDownShowAnimation(0.8)} 
+          {...topDownShowAnimation()} 
           className='flex justify-center lg:justify-end items-center'
         >
           <Image 
