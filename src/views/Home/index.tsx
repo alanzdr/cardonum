@@ -6,6 +6,7 @@ import Hero from './Hero'
 import HowItWorks from './HowItWorks'
 import ProfoundDifference from './ProfoundDifference'
 import AtLasVegas from './AtLasVegas'
+import DonateCards from './DonateCards'
 import PageLoading from 'components/PageLoading';
 
 const Home: React.FC = () => {
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
       <HowItWorks />
       <ProfoundDifference />
       <AtLasVegas />
+      <DonateCards />
       <PageLoading />
     </Motion>
   )

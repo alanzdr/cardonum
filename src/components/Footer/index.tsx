@@ -81,6 +81,7 @@ const Footer: React.FC = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className='w-8 h-8 rounded-bubble bg-transparent text-primary flex items-center justify-center transition-all hover:bg-primary hover:text-white'
+                aria-label='facebook'
               >
                 <FacebookIcon />
               </a>
@@ -89,6 +90,7 @@ const Footer: React.FC = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className='ml-2 w-8 h-8 rounded-bubble bg-transparent text-primary flex items-center justify-center transition-all hover:bg-primary hover:text-white'
+                aria-label='twitter'
               >
                 <TwitterIcon />
               </a>
@@ -97,6 +99,7 @@ const Footer: React.FC = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className='ml-2 w-8 h-8 rounded-bubble bg-transparent text-primary flex items-center justify-center transition-all hover:bg-primary hover:text-white'
+                aria-label='instagram'
               >
                 <InstagramIcon />
               </a>
