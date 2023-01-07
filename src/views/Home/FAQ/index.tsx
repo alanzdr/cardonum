@@ -39,7 +39,7 @@ const FAQ: React.FC = () => {
     (element: HTMLDivElement) => {
       const content = element?.querySelector<HTMLDivElement>('.faq-content');
       if (!content) return;
-      content.style.maxHeight = `${content.scrollHeight}px`
+      content.style.maxHeight = `${content.scrollHeight + 20}px`
     },
     [],
   )
