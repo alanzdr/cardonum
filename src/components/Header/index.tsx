@@ -39,18 +39,18 @@ const Header: React.FC = () => {
               "!text-white group-hover:text-white": isNavActive('/')
             })}>Home</p>
           </Link>
-          <Link href="/about" className={classNames("ml-3 group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
-            "bg-primary ": isNavActive("/about")
+          <Link href="/about-us" className={classNames("ml-3 group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
+            "bg-primary ": isNavActive("/about-us")
           })}>
             <p className={classNames("relative z-10 text-gray group-hover:text-primary transition-colors text-[0.8125rem] font-extrabold", {
-              "!text-white group-hover:text-white": isNavActive('/about')
+              "!text-white group-hover:text-white": isNavActive('/about-us')
             })}>About us</p>
           </Link>
-          <Link href="/contact" className={classNames("ml-3 group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
-            "bg-primary ": isNavActive("/contact")
+          <Link href="/contact-us" className={classNames("ml-3 group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
+            "bg-primary ": isNavActive("/contact-us")
           })}>
             <p className={classNames("relative z-10 text-gray group-hover:text-primary transition-colors text-[0.8125rem] font-extrabold", {
-              "!text-white group-hover:text-white": isNavActive('/contact')
+              "!text-white group-hover:text-white": isNavActive('/contact-us')
             })}>Contact us</p>
           </Link>
           <Link href="/donate" className={classNames("ml-3 group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {

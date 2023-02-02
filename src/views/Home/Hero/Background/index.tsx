@@ -5,8 +5,8 @@ import { m, MotionProps } from 'framer-motion';
 import BackgroundImage from 'assets/home/hero-background.png'
 import BackgroundMobileImage from 'assets/home/hero-background-mobile.png'
 import KidsImage from 'assets/home/hero-kids.png'
-import RightLinesImage from 'assets/home/right-lines.svg'
-import LeftLinesImage from 'assets/home/left-lines.svg'
+import RightLinesImage from 'assets/shapes/right-lines.svg'
+import LeftLinesImage from 'assets/shapes/left-lines.svg'
 
 interface Props {
   animation: (delay?: number) => MotionProps

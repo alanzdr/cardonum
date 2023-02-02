@@ -4,6 +4,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     "./src/components/**/*.{js,ts,jsx,tsx,css,scss}",
+    "./src/layouts/**/*.{js,ts,jsx,tsx,css,scss}",
     "./src/pages/**/*.{js,ts,jsx,tsx,css,scss}",
     "./src/views/**/*.{js,ts,jsx,tsx,css,scss}",
     "./src/styles/**/*.{js,ts,jsx,tsx,css,scss}",
@@ -34,6 +35,18 @@ module.exports = {
         inter: ['var(--font-inter)', ...fontFamily.sans],
         playfair: ['var(--font-playfair)', ...fontFamily.sans],
       },
+      minWidth: (theme) => ({
+        ...theme('spacing'),
+      }),
+      maxWidth: (theme) => ({
+        ...theme('spacing'),
+      }),
+      minHeight: (theme) => ({
+        ...theme('spacing'),
+      }),
+      maxHeight: (theme) => ({
+        ...theme('spacing'),
+      }),
     },
   },
   plugins: [],

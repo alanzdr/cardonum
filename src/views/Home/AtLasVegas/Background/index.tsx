@@ -5,7 +5,7 @@ import BackgroundImage from 'assets/home/at-las-vegas-background.png'
 import BackgroundMobileImage from 'assets/home/at-las-vegas-background-mobile.png'
 import KidImage from 'assets/home/at-las-vegas-image.png'
 import { m, MotionProps } from 'framer-motion';
-import LeftLinesImage from 'assets/home/left-lines.svg'
+import LeftLinesImage from 'assets/shapes/left-lines.svg'
 
 interface Props {
   animation: (delay?: number) => MotionProps

@@ -10,7 +10,6 @@ import DonateCards from './DonateCards'
 import Quotes from './Quotes'
 import FAQ from './FAQ'
 import TypesVehicle from './TypesVehicle'
-import PageLoading from 'components/PageLoading';
 
 const Home: React.FC = () => {
   return (

@@ -3,13 +3,14 @@ import dynamic from 'next/dynamic';
 
 import Loading from 'components/PageLoading';
 import SEO from 'components/SEO';
-const View = dynamic(() => import('views/Home'), {
+
+const View = dynamic(() => import('views/Contact'), {
   suspense: true
 });
 
 const Home: React.FC = () => {
-  const title = 'CarDonum';
-  const description = 'CarDonum';
+  const title = 'CarDonum | About us';
+  const description = 'CarDonum | About us';
 
   return (
     <>
