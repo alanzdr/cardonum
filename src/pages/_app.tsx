@@ -3,6 +3,7 @@ import { Inter } from '@next/font/google'
 import { Playfair_Display } from '@next/font/google'
 
 import 'styles/globals.css'
+import 'styles/hamburgers/hamburgers.scss'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 

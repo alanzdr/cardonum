@@ -9,8 +9,8 @@ const View = dynamic(() => import('views/Contact'), {
 });
 
 const Home: React.FC = () => {
-  const title = 'CarDonum | About us';
-  const description = 'CarDonum | About us';
+  const title = 'CarDonum | Contact us';
+  const description = 'CarDonum | Contact us';
 
   return (
     <>

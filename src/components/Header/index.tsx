@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import classNames from 'classnames';
 
 import LogoImage from 'assets/logo.svg'
@@ -10,6 +10,7 @@ import VerifyIcon from 'assets/icons/verify.svg'
 
 const Header: React.FC = () => {
   const router = useRouter()
+  const [isMenuOpened, setMenuOpened] = useState(false)
   
   const isNavActive = useCallback(
     (path: string) => {
@@ -21,7 +22,12 @@ const Header: React.FC = () => {
   return (
     <header className='fixed z-50 top-0 left-0 w-full h-20 bg-white shadow-lg'>
       <div className='container-big h-full flex items-center justify-between'>
-        <Link href="/" className='w-[12.3125rem] h-[2.5rem] lg:w-[14.5rem] lg:h-[2.9375rem] flex hover:opacity-80 transition-opacity'>
+        <div className='absolute lg:hidden z-10 left-0 top-0 bg-white w-full h-full' />
+        <Link 
+          href="/" 
+          onClick={() => setMenuOpened(false)} 
+          className='relative z-20 w-[12.3125rem] h-[2.5rem] lg:w-[14.5rem] lg:h-[2.9375rem] flex hover:opacity-80 transition-opacity'
+        >
           <Image 
             src={LogoImage}
             alt="Logo CarDonum.org"
@@ -31,29 +37,32 @@ const Header: React.FC = () => {
             loading='eager'
           />
         </Link>
-        <nav className='hidden lg:flex flex-row items-center'>
-          <Link href="/" className={classNames("group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
+        <nav className={classNames("fixed z-0 bg-white shadow-lg lg:shadow-none w-full p-10 lg:w-auto top-0 left-0 transition-transform duration-300 ease-out lg:relative lg:p-0 flex flex-col lg:flex-row gap-3 items-center", {
+          "-translate-y-full lg:translate-y-0": !isMenuOpened,
+          "translate-y-20 lg:translate-y-0": isMenuOpened
+        })}>
+          <Link href="/" onClick={() => setMenuOpened(false)} className={classNames("group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
             "bg-primary ": isNavActive("/")
           })}>
             <p className={classNames("relative z-10 text-gray group-hover:text-primary transition-colors text-[0.8125rem] font-extrabold", {
               "!text-white group-hover:text-white": isNavActive('/')
             })}>Home</p>
           </Link>
-          <Link href="/about-us" className={classNames("ml-3 group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
+          <Link href="/about-us" onClick={() => setMenuOpened(false)} className={classNames("group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
             "bg-primary ": isNavActive("/about-us")
           })}>
             <p className={classNames("relative z-10 text-gray group-hover:text-primary transition-colors text-[0.8125rem] font-extrabold", {
               "!text-white group-hover:text-white": isNavActive('/about-us')
             })}>About us</p>
           </Link>
-          <Link href="/contact-us" className={classNames("ml-3 group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
+          <Link href="/contact-us" onClick={() => setMenuOpened(false)} className={classNames("group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
             "bg-primary ": isNavActive("/contact-us")
           })}>
             <p className={classNames("relative z-10 text-gray group-hover:text-primary transition-colors text-[0.8125rem] font-extrabold", {
               "!text-white group-hover:text-white": isNavActive('/contact-us')
             })}>Contact us</p>
           </Link>
-          <Link href="/donate" className={classNames("ml-3 group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
+          <Link href="/donate" onClick={() => setMenuOpened(false)} className={classNames("group relative flex pl-[1.6875rem] pr-[1.5625rem] py-[0.625rem] transition-colors rounded-bubble", {
             "bg-primary ": isNavActive("/donate")
           })}>
             <p className={classNames("relative z-10 text-gray group-hover:text-primary transition-colors text-[0.8125rem] font-extrabold", {
@@ -83,6 +92,23 @@ const Header: React.FC = () => {
             <p className='ml-2 font-extrabold text-[0.8125rem] text-gray'>501c3 Accredited</p>
           </div>
         </div>
+        <button
+          className={classNames(
+            'relative z-20 hamburger hamburger--spin !flex lg:!hidden hover:!opacity-80',
+            {
+              'is-active': isMenuOpened,
+            }
+          )}
+          type="button"
+          aria-label="Menu"
+          onClick={() => setMenuOpened(!isMenuOpened)}
+        >
+          <span className="hamburger-box">
+            <span
+              className="hamburger-inner text-primary"
+            ></span>
+          </span>
+        </button>
       </div>
     </header>
   );
