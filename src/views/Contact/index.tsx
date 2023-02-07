@@ -4,7 +4,7 @@ import Motion from 'contexts/MotionContent';
 import PageHero from 'layouts/PageHero';
 import Delighted from './Delighted';
 import Links from './Links';
-import PageLoading from 'components/PageLoading';
+import FormBox from './FormBox';
 
 const Contact: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
       <PageHero title='Contact us'/>
       <Delighted />
       <Links />
-      <PageLoading />
+      <FormBox />
     </Motion>
   )
 }
