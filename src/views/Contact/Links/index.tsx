@@ -11,7 +11,7 @@ const Links: React.FC = () => {
   const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
 
   return (
-    <section ref={animationRef} className='w-full mt-6'>
+    <section ref={animationRef} className='w-full overflow-hidden mt-6'>
       <m.div {...topDownShowAnimation()} className='container rounded-lg shadow-lg px-10 py-8 grid md:grid-rows-2 md:grid-cols-2 lg:grid-rows-1 lg:grid-cols-[3fr,4fr,1px,6fr] gap-10'>
         <a 
           href="tel:7020000000"

@@ -10,10 +10,10 @@ const Delighted: React.FC = () => {
   const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
 
   return (
-    <section className='container mt-20'>
+    <section className='w-full overflow-hidden mt-20'>
       <div 
         ref={animationRef} 
-        className='grid grid-rows-[auto] gap-10 lg:grid-rows-1 lg:grid-cols-[7fr,8fr] lg:gap-24'
+        className='grid container grid-rows-[auto] gap-10 lg:grid-rows-1 lg:grid-cols-[7fr,8fr] lg:gap-24'
       >
         <div className='flex flex-col row-start-2 lg:row-start-1'>
           <m.div {...topDownShowAnimation(0.6)} >
