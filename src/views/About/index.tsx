@@ -5,6 +5,7 @@ import PageHero from 'layouts/PageHero';
 import PageLoading from 'components/PageLoading';
 import Mission from './Mission';
 import Established from './Established';
+import Founders from './Founders';
 
 const About: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const About: React.FC = () => {
       <PageHero title='About us'/>
       <Mission />
       <Established />
+      <Founders />
       <PageLoading />
     </Motion>
   )

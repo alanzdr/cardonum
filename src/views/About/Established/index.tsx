@@ -11,7 +11,7 @@ const Established: React.FC = () => {
   const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
 
   return (
-    <div className='container mt-5'>
+    <section className='container mt-5'>
       <div 
         ref={animationRef} 
         className='grid grid-rows-[auto] gap-10 lg:grid-rows-1 lg:grid-cols-[8fr,7fr] lg:gap-12'
@@ -60,7 +60,7 @@ const Established: React.FC = () => {
           />
         </m.div>
       </div>
-    </div>
+    </section>
   );
 }
 
