@@ -32,6 +32,7 @@ const SEO: React.FC<SEOProps> = ({
         property="og:description"
         content={description}
       />
+      <meta name="theme-color" content="#F9615D" />
       <meta property="og:image" content={resolvePath('/thumbnail.png')} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
