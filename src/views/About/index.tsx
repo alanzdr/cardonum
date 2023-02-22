@@ -6,6 +6,7 @@ import PageLoading from 'components/PageLoading';
 import Mission from './Mission';
 import Established from './Established';
 import Founders from './Founders';
+import Team from './Team';
 
 const About: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const About: React.FC = () => {
       <Mission />
       <Established />
       <Founders />
+      <Team />
       <PageLoading />
     </Motion>
   )

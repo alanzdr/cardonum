@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
 
-import ToyIcon from 'assets/contact-us/delighted-icon.svg'
+import FlowerIcon from 'assets/contact-us/delighted-icon.svg'
 import KidImage from 'assets/contact-us/delighted-image.png'
 import useScrollAnimation from 'hooks/useScrollAnimation';
 import { m } from 'framer-motion';
@@ -18,8 +18,8 @@ const Delighted: React.FC = () => {
         <div className='flex flex-col row-start-2 lg:row-start-1'>
           <m.div {...topDownShowAnimation(0.6)} >
             <Image 
-              src={ToyIcon}
-              alt=""
+              src={FlowerIcon}
+              alt="Flower Icon"
               width={46}
               height={48}
             />
