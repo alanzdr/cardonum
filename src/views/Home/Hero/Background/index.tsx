@@ -4,6 +4,7 @@ import { m, MotionProps } from 'framer-motion';
 
 import BackgroundImage from 'assets/home/hero-background.png'
 import BackgroundMobileImage from 'assets/home/hero-background-mobile.png'
+import SlideImage from 'assets/home/hero-slide-icon.svg'
 import KidsImage from 'assets/home/hero-kids.png'
 import RightLinesImage from 'assets/shapes/right-lines.svg'
 import LeftLinesImage from 'assets/shapes/left-lines.svg'
@@ -28,6 +29,16 @@ const Background: React.FC<Props> = ({animation}) => {
         loading='eager'
       />
       <div className='relative w-full h-[22.5rem] lg:static lg:flex overflow-hidden'>
+        <m.div {...animation(0.4)} className="z-10 absolute top-1/2 left-1/2">
+          <Image 
+            src={SlideImage}
+            alt="Shape icon"
+            loading='eager'
+            width={72}
+            height={72}
+            className="w-8 h-8 lg:w-[4.5rem] lg:h-[4.5rem] -translate-x-[145px] translate-y-[65px] lg:-translate-x-[10.3125rem] lg:translate-y-[7.5rem]"
+          />
+        </m.div>
         <m.div {...animation()} className="absolute top-1/2 left-1/2 lg:left-[calc(50%+6rem)] w-[25rem] lg:w-[42.5rem]">
           <Image 
             src={KidsImage}

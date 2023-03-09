@@ -6,7 +6,8 @@ import classNames from 'classnames';
 
 import LogoImage from 'assets/logo.svg'
 import { ReactComponent as TelIcon } from 'assets/icons/cell.svg'
-import VerifyIcon from 'assets/icons/verify.svg'
+// import VerifyIcon from 'assets/icons/verify.svg'
+import VerifyButton from 'assets/verify-button.svg'
 
 const Header: React.FC = () => {
   const router = useRouter()
@@ -81,15 +82,13 @@ const Header: React.FC = () => {
             </p>
           </a>
           <div className="hidden xl:flex mx-6 w-[1px] h-4 content-[''] bg-gray-medium" />
-          <div className='hidden xl:flex flex-row items-center pl-4 pr-6 pt-3 pb-[0.625rem] bg-gray-light rounded-bubble'>
-            <Image 
-              src={VerifyIcon}
-              alt="Phone Icon"
-              loading='eager'
-              width={16}
-              height={16}
+          <div
+            className='relative w-[11.25rem] h-10 hidden xl:flex overflow-hidden'
+          >
+            <object 
+              data={VerifyButton}
+              className="absolute top-[calc(50%-0.5rem)] left-0 -translate-y-1/2 w-full"
             />
-            <p className='ml-2 font-extrabold text-[0.8125rem] text-gray'>501c3 Accredited</p>
           </div>
         </div>
         <button

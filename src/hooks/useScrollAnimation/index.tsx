@@ -41,11 +41,27 @@ const useScrollAnimation = (initalThreshold = 0.35, delay = 200) => {
     [controls]
   )
 
+  const leftRightShowAnimation = useCallback(
+    (delay = 0): MotionProps => {
+      return {
+        initial: 'hidden',
+        animate: controls,
+        variants: {
+          hidden: { opacity: 0, x: -80 },
+          visible: { opacity: 1, x: 0 },
+        },
+        transition: getTransition({ delay }),
+      }
+    },
+    [controls]
+  )
+
   return {
     animationRef: reference,
     controls,
     alreadyInView,
     topDownShowAnimation,
+    leftRightShowAnimation
   }
 }
 
