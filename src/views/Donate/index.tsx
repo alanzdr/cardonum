@@ -6,8 +6,9 @@ import PageLoading from 'components/PageLoading';
 import PointsGrid from './PointsGrid';
 import Video from './Video';
 import PointsList from './PointsList';
-import FAQ from './FAQ';
 import CtaBox from './CtaBox';
+import IconedCarrousel from './IconedCarrousel';
+import FAQ from './FAQ';
 
 const Donate: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Donate: React.FC = () => {
       <Video />
       <PointsList />
       <CtaBox />
+      <IconedCarrousel />
       <PageLoading />
       <FAQ />
     </Motion>

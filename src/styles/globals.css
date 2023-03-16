@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "swiper/css";
+@import "swiper/css/pagination";
+
 @layer base {
   h1,
   h2,
@@ -60,5 +63,26 @@
 
   .ball {
     @apply rounded-full bg-gradient-to-b from-primary-dark to-primary-light content-[''];
+  }
+
+  .swiper .swiper-pagination {
+    @apply flex w-min left-1/2 -translate-x-1/2 items-center justify-center gap-2 relative -bottom-10 after:absolute after:w-[90%] after:z-0 after:h-px after:bg-[#DEDEDE];
+  }
+
+  .swiper .swiper-pagination-bullet {
+    @apply z-10 w-3 h-3 hover:w-4 hover:h-4 bg-white border-2 border-[#DEDEDE] opacity-100 transition-all duration-300 ease-out;
+  }
+
+  .swiper .swiper-pagination-bullet-active {
+    @apply w-6 h-6 border-none rounded-full bg-gradient-to-b from-primary-dark to-primary-light transition-all duration-300 ease-out;
+  }
+
+  .swiper-button-disabled {
+    @apply !bg-white !text-[#000]/10;
+    background: #fff !important;
+  }
+
+  .swiper-slide {
+    height: auto;
   }
 }
