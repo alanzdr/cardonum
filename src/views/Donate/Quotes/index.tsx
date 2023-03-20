@@ -4,29 +4,41 @@ import { Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { m } from 'framer-motion';
 
-import FlowerIcon from 'assets/contact-us/delighted-icon.svg'
+import BackgroundImage from 'assets/home/quotes-background.png'
+import BackgroundMobileImage from 'assets/home/quotes-background-mobile.png'
+import QuoteIcon from 'assets/donate/quote-icon.svg'
 import useScrollAnimation from 'hooks/useScrollAnimation';
-import useIconedData from './useIconedData';
-import classNames from 'classnames';
+import useQuoteData from './useQuoteData';
+import QuotesFilledIcon from 'assets/home/quotes-symbol-filled.svg'
 import { ReactComponent as Arrow } from 'assets/icons/right-arrow.svg'
 
-const IconedCarrousel: React.FC = () => {
+const Quotes: React.FC = () => {
   const { animationRef, topDownShowAnimation } = useScrollAnimation()
-  const { data } = useIconedData()
+  const { data } = useQuoteData()
   
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
 
   return (
-    <section className='pt-2 lg:pt-14 pb-20 overflow-hidden'>
+    <section className='pt-16 pb-28 lg:pt-24 lg:pb-36 mt-14 lg:mt-28 w-full relative overflow-hidden'>
+      <Image 
+        src={BackgroundImage}
+        alt="background gradient"
+        className="hidden md:flex w-full h-full absolute left-0 top-0 object-cover"
+      />
+      <Image 
+        src={BackgroundMobileImage}
+        alt="background gradient"
+        className="md:hidden w-full h-full absolute left-0 top-0 object-cover"
+      />
       <div ref={animationRef} className='relative container'>
         <div className='flex flex-row justify-between'>
           <m.div>
             <m.div {...topDownShowAnimation()} >
               <Image 
-                src={FlowerIcon}
-                alt="Flower Icon"
-                width={46}
+                src={QuoteIcon}
+                alt="Quote Icon"
+                width={76}
                 height={48}
               />
             </m.div>
@@ -34,7 +46,7 @@ const IconedCarrousel: React.FC = () => {
               className='mt-5 heading-2 relative max-w-xs'
               {...topDownShowAnimation(0.2)} 
             >
-              Conubia nisi ipsum consequat etiam
+              Lorem ipsum dolor sit amet elit
             </m.h2>
           </m.div>
           <m.div 
@@ -57,8 +69,8 @@ const IconedCarrousel: React.FC = () => {
         </div>
         <m.div className='mt-10' {...topDownShowAnimation(0.5)} >
           <Swiper
-            slidesPerView={1.2}
-            spaceBetween={24}
+            slidesPerView={1}
+            spaceBetween={20}
             pagination={{
               clickable: true,
             }}
@@ -76,34 +88,35 @@ const IconedCarrousel: React.FC = () => {
                 slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 4,
-                spaceBetween: 32
-              }
+                slidesPerView: 3,
+                spaceBetween: 20
+              },
             }}
             className="swiper overflow-visible cursor-grab active:!cursor-grabbing"
           >
             {data.map(item => (
               <SwiperSlide key={`iconed-${item.key}`} >
-                <div className='rounded-lg bg-[#FF7F5B] shadow-lg h-full'>
-                  <div className={classNames('bg-white h-full rounded-lg translate-y-1 py-10 px-8', {
-                    "bg-gradient-to-br from-[#EA4745] to-[#FE8664]": item.orangeBackground
-                  })}>
-                    <div className={classNames('bg-[#EBECF0] rounded-full w-16 h-16 flex items-center justify-center', {
-                      "bg-white": item.orangeBackground
-                    })}>
-                      <Image 
-                        src={item.icon}
-                        alt="Icon"
-                        width={32}
-                        height={32}
-                      />
-                    </div>
-                    <p className={classNames('mt-5', {
-                      "text-white": item.orangeBackground
-                    })}>
-                      {item.text}
-                    </p>
-                  </div>
+                <div 
+                  className='relative bg-white shadow-lg rounded-xl p-9 flex flex-col'
+                >
+                  <Image 
+                    src={QuotesFilledIcon}
+                    alt="Quote"
+                    width={76}
+                    height={48}
+                    className="absolute top-0 right-1"
+                  />
+                  <Image 
+                    src={item.image}
+                    alt={`${item.name} image`}
+                    width={50}
+                    height={50}
+                    quality={90}
+                  />
+                  <strong className='text-lg mt-3'>{item.name}</strong>
+                  <p className='mt-3 text-sm'>
+                    {item.text}
+                  </p>
                 </div>
               </SwiperSlide>
             ))}
@@ -114,4 +127,4 @@ const IconedCarrousel: React.FC = () => {
   )
 }
 
-export default IconedCarrousel;
+export default Quotes;

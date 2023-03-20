@@ -17,7 +17,7 @@ const FlowerCTA: React.FC = () => {
         className='grid grid-rows-[auto] gap-10 lg:grid-rows-1 lg:grid-cols-2 lg:gap-20'
       >
         <m.div 
-          {...topDownShowAnimation()} 
+          {...topDownShowAnimation(1)} 
           className='flex justify-center lg:justify-end items-center row-start-2 lg:row-start-1'
         >
           <Image 
@@ -29,7 +29,7 @@ const FlowerCTA: React.FC = () => {
         </m.div>
         <div className='flex flex-col justify-center'>
           <m.div  
-            {...topDownShowAnimation(0.2)}  
+            {...topDownShowAnimation()}  
           >
             <Image 
               src={FlowerIcon}
@@ -39,7 +39,7 @@ const FlowerCTA: React.FC = () => {
             />
           </m.div>
           <m.h3 
-            {...topDownShowAnimation(0.3)} 
+            {...topDownShowAnimation(0.2)} 
             className='text-[2.5rem] leading-tight mt-4'
           >
             Rutrum vitae augue ante vitae potenti pharetra
@@ -64,13 +64,13 @@ const FlowerCTA: React.FC = () => {
         </div>
       </div>
       <div className='mt-8 lg:mt-20 flex flex-col md:grid md:grid-cols-2 lg:gap-20'>
-        <m.div {...topDownShowAnimation(1)} className='flex flex-row'>
+        <m.div {...topDownShowAnimation(1.2)} className='flex flex-row'>
           <div 
             className='relative top-[0.875rem] w-10 lg:w-20 h-px bg-[#1C1D25] flex-none'
           />
           <h3 className='ml-5 heading-3 max-w-[21.4375rem]'>Donate today and make an impact in someone&apos;s life! </h3>
         </m.div>
-        <m.div {...topDownShowAnimation(1.2)} className='w-full mx-auto mt-8 max-w-[19.375rem] md:m-0 '>
+        <m.div {...topDownShowAnimation(1.4)} className='w-full mx-auto mt-8 max-w-[19.375rem] md:m-0 '>
           <Button
             component='button'
             type="button"

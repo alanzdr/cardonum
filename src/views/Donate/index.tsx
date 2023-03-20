@@ -9,6 +9,8 @@ import PointsList from './PointsList';
 import CtaBox from './CtaBox';
 import IconedCarrousel from './IconedCarrousel';
 import FlowerCTA from './FlowerCTA';
+import Quotes from './Quotes';
+import WithLove from './WithLove';
 import FAQ from './FAQ';
 
 const Donate: React.FC = () => {
@@ -21,6 +23,8 @@ const Donate: React.FC = () => {
       <CtaBox />
       <IconedCarrousel />
       <FlowerCTA />
+      <Quotes />
+      <WithLove />
       <PageLoading />
       <FAQ />
     </Motion>
