@@ -11,6 +11,7 @@ import IconedCarrousel from './IconedCarrousel';
 import FlowerCTA from './FlowerCTA';
 import Quotes from './Quotes';
 import WithLove from './WithLove';
+import BigCTA from './BigCTA';
 import FAQ from './FAQ';
 
 const Donate: React.FC = () => {
@@ -25,6 +26,7 @@ const Donate: React.FC = () => {
       <FlowerCTA />
       <Quotes />
       <WithLove />
+      <BigCTA />
       <PageLoading />
       <FAQ />
     </Motion>
