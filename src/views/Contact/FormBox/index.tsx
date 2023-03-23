@@ -14,7 +14,7 @@ const FormBox: React.FC = () => {
   const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
-    <section ref={animationRef} className='w-full overflow-hidden pb-8 mt-14 md:mt-20'>
+    <section ref={animationRef} className='w-full overflow-hidden pb-8 mt-14 md:mt-16'>
       <div className='container grid grid-rows-[auto] grid-cols-1 md:grid-cols-2 gap-10'>
         <m.div {...topDownShowAnimation()} className='bg-white shadow-lg rounded-lg flex flex-col p-8 md:p-14'>
           <div className='w-12 h-[3.75rem] flex-none bg-primary rounded-lg flex items-center justify-center'>
