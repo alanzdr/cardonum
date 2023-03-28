@@ -11,10 +11,10 @@ const BigCTA: React.FC = () => {
   const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
-    <section className="relative pt-[29.375rem] pb-16 sm:py-32 w-full">
+    <section className="mt-8 relative pb-16 sm:py-32 w-full">
       <m.div 
         {...topDownShowAnimation()} 
-        className="w-[21.604rem] h-[29.375rem] md:h-auto md:w-[24rem] lg:w-[28rem] xl:w-[678px] absolute left-0 top-0 md:top-1/2 z-0"
+        className="hidden lg:flex lg:w-[28rem] xl:w-[678px] absolute left-0 top-0 md:top-1/2 z-0"
       >
         <Image 
           src={KidImage}
@@ -24,26 +24,40 @@ const BigCTA: React.FC = () => {
           className="w-full object-contain object-left-top md:-translate-y-1/2"
         />
       </m.div>
-      <div ref={animationRef} className='container relative z-10 flex justify-start sm:justify-end '>
-        <div className='sm:max-w-[21rem] md:max-w-[31rem]'>
-          <m.div {...topDownShowAnimation(0.2)}>
+      <div ref={animationRef} className='lg:container relative z-10 flex justify-start sm:justify-end '>
+        <div className='lg:max-w-[31rem]'>
+          <div className='container lg:max-w-full lg:w-full'>
+            <m.div {...topDownShowAnimation(0.2)}>
+              <Image 
+                src={GiftIcon}
+                alt="Gift Icon"
+                width={60}
+                height={43}
+              />
+            </m.div>
+            <m.div  
+              className='flex flex-row items-center mt-8'
+              {...topDownShowAnimation(0.2)}  
+            >
+              <h2 className='heading-2 lg:text-4xl max-w-[23rem]'>
+                Lorem ipsum dolor sit amet consectutier
+                web elit
+              </h2>
+            </m.div>
+          </div>
+          <m.div 
+            {...topDownShowAnimation(0.3)} 
+            className="w-full my-4 lg:hidden"
+          >
             <Image 
-              src={GiftIcon}
-              alt="Gift Icon"
-              width={60}
-              height={43}
+              src={KidImage}
+              alt="children hugging"
+              width={360}
+              height={532}
+              className="w-full max-w-sm object-contain object-left-top"
             />
           </m.div>
-          <m.div  
-            className='flex flex-row items-center mt-8'
-            {...topDownShowAnimation(0.2)}  
-          >
-            <h2 className='heading-2 lg:text-4xl max-w-[23rem]'>
-              Lorem ipsum dolor sit amet consectutier
-              web elit
-            </h2>
-          </m.div>
-          <div className='mt-8 flex flex-col gap-6'>
+          <div className='container lg:max-w-full lg:w-full mt-8 flex flex-col gap-6'>
             <m.p  {...topDownShowAnimation(0.4)} className='font-bold'>
               Lorem ipsum aenean in torquent commodo enim lorem ante, 
               rutrum vitae augue ante vitae potenti pharet.
@@ -65,7 +79,11 @@ const BigCTA: React.FC = () => {
               scelerisque.
             </m.p>
             <m.div {...topDownShowAnimation(0.8)} className='flex items-center pt-2'>
-              <Button className='w-full md:w-72'>
+              <Button 
+                className='w-full md:w-72'
+                component='a'
+                href="/contact-us"  
+              >
                 Contact us
               </Button>
             </m.div>

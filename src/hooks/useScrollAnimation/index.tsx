@@ -1,30 +1,21 @@
-import { MotionProps, useAnimation } from 'framer-motion'
-import { useCallback, useEffect, useState } from 'react'
-import { useInView } from 'react-intersection-observer'
+import { MotionProps, useAnimation, useInView } from 'framer-motion'
+import { RefObject, useCallback, useEffect, useRef } from 'react'
 
 import { getTransition } from 'utils/animation'
 
-const useScrollAnimation = (initalThreshold = 0.35, delay = 200) => {
+const useScrollAnimation = () => {
   const controls = useAnimation()
-  const [threshold, setThreshold] = useState(initalThreshold)
-  const [alreadyInView, setAlreadyInView] = useState(false)
-  const [reference, inView] = useInView({
-    delay,
-    threshold,
+  const reference = useRef<HTMLDivElement>(null)
+  const isInView = useInView(reference as unknown as RefObject<Element>, {
+    margin: '0px 0px -25% 0px',
+    once: true,
   })
 
   useEffect(() => {
-    if (inView && !alreadyInView) {
+    if (isInView) {
       controls.start('visible')
-      setAlreadyInView(true)
     }
-  }, [alreadyInView, controls, inView])
-
-  useEffect(() => {
-    if (window.innerWidth <= 1000) {
-      setThreshold(0)
-    }
-  }, [initalThreshold])
+  }, [controls, isInView])
 
   const topDownShowAnimation = useCallback(
     (delay = 0): MotionProps => {
@@ -59,7 +50,7 @@ const useScrollAnimation = (initalThreshold = 0.35, delay = 200) => {
   return {
     animationRef: reference,
     controls,
-    alreadyInView,
+    alreadyInView: isInView,
     topDownShowAnimation,
     leftRightShowAnimation
   }

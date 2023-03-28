@@ -28,7 +28,7 @@ const Form: React.FC = () => {
   
 
   return (
-    <div className='relative'>
+    <div  className='relative'>
       {step < 3 && (
         <div className='max-w-[15.4375rem]'>
           <h2 className='text-2xl font-bold leading-none'>
@@ -56,11 +56,14 @@ const Form: React.FC = () => {
             animate="animate"
             exit="exit"
             variants={{
-              initial: { opacity: 0, x: 120 },
+              initial: { opacity: 0, x: 60 },
               animate: { opacity: 1, x: 0 },
-              exit: { opacity: 0, x: -120 },
+              exit: { opacity: 0, x: -60 },
             }}
-            transition={getTransition()}
+            transition={getTransition({
+              stiffness: 160,
+              damping: 30
+            })}
             key={`form-step-${step}`} 
             className="absolute top-0 left-0 w-full h-full"
           >

@@ -7,7 +7,7 @@ import useScrollAnimation from 'hooks/useScrollAnimation';
 import { m } from 'framer-motion';
 
 const FinancialAid: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
     <div className='container mt-16'>

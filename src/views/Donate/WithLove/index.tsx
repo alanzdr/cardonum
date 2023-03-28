@@ -8,7 +8,7 @@ import useScrollAnimation from 'hooks/useScrollAnimation';
 import { m } from 'framer-motion';
 
 const WithLove: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
     <section className='container mt-14 lg:mt-28'>

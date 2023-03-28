@@ -52,7 +52,11 @@ const AtLasVegas: React.FC = () => {
               </strong>
             </m.div>
             <m.div {...topDownShowAnimation(1)}>
-              <Button className='w-full'>
+              <Button 
+                className='w-full'
+                component='a' 
+                href='/#donate-today'  
+              >
                 Donate today
               </Button>
             </m.div>

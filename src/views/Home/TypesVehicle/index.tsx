@@ -147,7 +147,11 @@ const TypesVehicle: React.FC = () => {
               </div>
             </m.div>
             <m.div {...topDownShowAnimation(1.1)} className='pt-7 flex items-center lg:border-t-[1px] border-[#dad9dd]'>
-              <Button className='w-full'>
+              <Button 
+                className='w-full'
+                component='a' 
+                href='/#donate-today'
+              >
                 Donate today
               </Button>
             </m.div>

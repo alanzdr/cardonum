@@ -8,7 +8,7 @@ import { m } from 'framer-motion';
 import Button from 'components/Button';
 
 const FlowerCTA: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
     <section className='container mt-16'>
@@ -72,9 +72,8 @@ const FlowerCTA: React.FC = () => {
         </m.div>
         <m.div {...topDownShowAnimation(1.4)} className='w-full mx-auto mt-8 max-w-[19.375rem] md:m-0 '>
           <Button
-            component='button'
-            type="button"
-            onClick={() => {}}
+            component='a' 
+            href='/#donate-today'
             className="w-full"
           >
             Donate today

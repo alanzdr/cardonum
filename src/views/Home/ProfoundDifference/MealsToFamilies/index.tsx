@@ -9,7 +9,7 @@ import styled from './meals.module.css'
 import classNames from 'classnames';
 
 const MealsToFamilies: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
     <div className={classNames('mt-12 py-12 lg:mt-20 lg:py-24', styled.background)}>

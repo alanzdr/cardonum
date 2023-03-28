@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
 
   return (
     <section 
-      id='section-hero' 
+      id="donate-today"
       ref={animationRef} 
       className='relative bg-white lg:bg-[#e1e0e7]'
     >

@@ -9,7 +9,7 @@ import KidImage from 'assets/donate/points-list-image.png'
 import useScrollAnimation from 'hooks/useScrollAnimation';
 
 const PointsList: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
     <section className='relative py-8 lg:mt-12 lg:py-12'>

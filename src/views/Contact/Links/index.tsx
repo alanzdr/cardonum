@@ -8,7 +8,7 @@ import { m } from 'framer-motion';
 import useScrollAnimation from 'hooks/useScrollAnimation';
 
 const Links: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
     <section ref={animationRef} className='w-full overflow-hidden py-6'>

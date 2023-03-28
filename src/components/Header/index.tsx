@@ -1,17 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 
 import LogoImage from 'assets/logo.svg'
 import { ReactComponent as TelIcon } from 'assets/icons/cell.svg'
 // import VerifyIcon from 'assets/icons/verify.svg'
 import VerifyButton from 'assets/verify-button.svg'
+import useScrollPosition from 'hooks/useScrollPosition';
 
 const Header: React.FC = () => {
   const router = useRouter()
   const [isMenuOpened, setMenuOpened] = useState(false)
+  const { onScroll, getScrollPosition } = useScrollPosition()
+  const [areScroledToUp, setScrolledToUp] = useState(true)
+  const lastScrollPosition = useRef(0)
   
   const isNavActive = useCallback(
     (path: string) => {
@@ -19,9 +23,26 @@ const Header: React.FC = () => {
     },
     [router.asPath],
   )
+
+  useEffect(() => {
+    const firstScrollPosition = getScrollPosition()
+    const handleScroll = (scrollPosition: number) => {
+      if (scrollPosition < 80) {
+        setScrolledToUp(true)
+      } else {
+        setScrolledToUp(scrollPosition < lastScrollPosition.current)
+      }
+
+      lastScrollPosition.current = scrollPosition
+    }
+    handleScroll(firstScrollPosition)
+    return onScroll(handleScroll)
+  }, [getScrollPosition, lastScrollPosition, onScroll])
   
   return (
-    <header className='fixed z-50 top-0 left-0 w-full h-20 bg-white shadow-lg'>
+    <header className={classNames('fixed z-50 top-0 left-0 w-full h-20 bg-white shadow-lg transition-transform duration-300 ease-out', {
+      '-translate-y-full': !areScroledToUp,
+    })}>
       <div className='container-big h-full flex items-center justify-between'>
         <div className='absolute lg:hidden z-10 left-0 top-0 bg-white w-full h-full' />
         <Link 

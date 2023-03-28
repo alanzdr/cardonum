@@ -12,6 +12,7 @@ import FlowerCTA from './FlowerCTA';
 import Quotes from './Quotes';
 import WithLove from './WithLove';
 import BigCTA from './BigCTA';
+import CheckList from './CheckList';
 import FAQ from './FAQ';
 
 const Donate: React.FC = () => {
@@ -27,7 +28,7 @@ const Donate: React.FC = () => {
       <Quotes />
       <WithLove />
       <BigCTA />
-      <PageLoading />
+      <CheckList />
       <FAQ />
     </Motion>
   )

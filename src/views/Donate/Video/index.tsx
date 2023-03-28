@@ -15,7 +15,7 @@ import styles from './video.module.css'
 import classNames from 'classnames';
 
 const Video: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
   const [isVideoOpened, setVideoOpened] = useState(false)
 
   return (
@@ -58,7 +58,11 @@ const Video: React.FC = () => {
             </m.p>
             
             <m.div {...topDownShowAnimation(1.2)} className='flex items-center mt-8'>
-              <Button className='w-full md:w-72'>
+              <Button 
+                className='w-full md:w-72'
+                component='a' 
+                href='/#donate-today'
+              >
                 Donate today
               </Button>
             </m.div>

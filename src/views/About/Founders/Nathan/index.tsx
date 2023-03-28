@@ -8,7 +8,7 @@ import useScrollAnimation from 'hooks/useScrollAnimation';
 
 
 const Nathan: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
     <div>

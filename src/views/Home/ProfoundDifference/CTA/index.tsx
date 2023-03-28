@@ -6,7 +6,7 @@ import React from 'react';
 // import { Container } from './styles';
 
 const CTA: React.FC = () => {
-  const { animationRef, topDownShowAnimation } = useScrollAnimation(0.4)
+  const { animationRef, topDownShowAnimation } = useScrollAnimation()
 
   return (
     <div ref={animationRef} className='container mt-8 lg:mt-20 flex flex-col md:flex-row md:items-center justify-between'>
@@ -18,9 +18,8 @@ const CTA: React.FC = () => {
       </m.div>
       <m.div {...topDownShowAnimation(0.2)} className='w-full mx-auto mt-8 sm:w-1/2 max-w-[26.875rem] md:m-0 md:ml-4 '>
         <Button
-          component='button'
-          type="button"
-          onClick={() => {}}
+          component='a' 
+          href='/#donate-today'
           className="w-full"
         >
           Donate today

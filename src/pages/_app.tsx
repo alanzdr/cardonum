@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
-import { Inter } from '@next/font/google'
-import { Playfair_Display } from '@next/font/google'
+import { Inter } from 'next/font/google'
+import { Playfair_Display } from 'next/font/google'
 
 import 'styles/globals.css'
 import 'styles/hamburgers/hamburgers.scss'

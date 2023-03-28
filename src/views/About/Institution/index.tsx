@@ -43,7 +43,11 @@ const Institution: React.FC = () => {
               and make a difference, <b>please contact us.</b>
             </m.p>
             <m.div {...topDownShowAnimation(0.8)} className='flex items-center pt-2'>
-              <Button className='w-full md:w-72'>
+              <Button 
+                className='w-full md:w-72' 
+                component='a' 
+                href='/contact-us'
+              >
                 Contact us
               </Button>
             </m.div>
